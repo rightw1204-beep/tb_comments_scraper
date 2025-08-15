@@ -14,14 +14,14 @@ redis_client = redis.Redis(
     host='localhost',
     port=6379,
     db=0,
-    password='123456',
+    password='your_Redis_password',
     decode_responses=True
 )
 
 # 登录获取 cookies
 page = ChromiumPage()
-username = '15570010695'
-password = 'wlj1204..'
+username = 'your_username'
+password = 'your_password'
 page.get('https://login.taobao.com/havanaone/login/login.htm')
 page.ele('xpath://*[@id="fm-login-id"]').clear().input(username)
 page.ele('xpath://*[@id="fm-login-password"]').clear().input(password)
